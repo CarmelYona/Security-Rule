@@ -1,5 +1,5 @@
 .main-page {
-    height: 100%;
+    height: 100vh;
     padding: 0.5rem;
     display: flex;
     align-items: center;
@@ -9,8 +9,8 @@
         flex-direction: column;
         align-items: center;
         position: relative;
-        height: 50%;
-        width: 50%;
+        height: 50vh;
+        width: 40vw;
         background-color: rgb(245, 245, 245);
         box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.75);
         -webkit-box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.75);
@@ -32,9 +32,17 @@
                 display: flex;
                 gap: 5px;
                 flex-direction: column;
+
+                .select-wrapper {
+                    select {
+                        direction: rtl;
+                        background-position: left 0.75rem center;
+                    }
+                }
             }
 
             .check-box-wrapper {
+                direction: rtl;
                 height: 12rem;
                 width: 60%;
                 display: flex;
@@ -42,13 +50,19 @@
                 background-color: white;
                 padding: 1rem;
                 overflow-y: auto;
-             
+
 
                 .checkbox {
+                    direction: ltr;
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
                     gap: 10px;
+
+                    label,
+                    input {
+                        cursor: pointer;
+                    }
                 }
             }
         }
